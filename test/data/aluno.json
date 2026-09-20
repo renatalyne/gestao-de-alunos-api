@@ -1,0 +1,10 @@
+{
+  "disciplina": {
+    "nome": "Matemática Básica",
+    "cargaHoraria": 40
+  },
+  "trabalho": {
+    "titulo": "Trabalho de Matemática",
+    "descricao": "Entrega do trabalho de matemática básica."
+  }
+}
