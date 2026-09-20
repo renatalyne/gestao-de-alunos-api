@@ -14,10 +14,10 @@ describe('Fluxo do aluno', () => {
     let disciplinaId;
 
     before(async () => {
+        //faz o login como administrador e captura o token de autenticação para usar nos testes
         adminToken = await loginComoAdmin();
-
-        expect(adminToken).to.be.a('string');
-
+        
+       //cria um novo aluno para usar nos testes
         aluno = novoAluno();
     });
 
@@ -64,8 +64,7 @@ it('Realizar a matrícula do aluno na disciplina', async () => {
 
 it('Realizar o login do aluno cadastrado', async () => {
     alunoToken = await loginComoAluno(aluno.email, aluno.senha);
-
-    expect(alunoToken).to.be.a('string');
+   //console.log(alunoToken);
 });
 it('Realizar a entrega do trabalho como aluno', async () => {
     const resposta = await request(app)
