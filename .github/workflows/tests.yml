@@ -38,6 +38,9 @@ jobs:
         run: npm test
         env:
           MONGODB_URI: mongodb://127.0.0.1:27017/gestao-de-alunos-test
+          ADMIN_EMAIL: admin@escola.com
+          ADMIN_SENHA: admin123
+
       - name: Publicar relatório dos testes gestao de alunos
         if: always()
         uses: actions/upload-artifact@v4
