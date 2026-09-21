@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "mocha test/**/*.test.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=relatorio-testes,html=true,json=true --exit"
+    "test": "mocha --file test/hooks.js test/**/*.test.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=relatorio-testes,html=true,json=true --exit"
   },
   "author": "",
   "license": "ISC",

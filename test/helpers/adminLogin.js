@@ -5,8 +5,8 @@ export async function loginComoAdmin() {
     const resposta = await request(app)
         .post('/api/auth/login')
         .send({
-            email: 'admin@escola.com',
-            senha: 'admin123'
+            email: process.env.ADMIN_EMAIL,
+            senha: process.env.ADMIN_SENHA
         });
 
     return resposta.body.token;
